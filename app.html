@@ -12,17 +12,37 @@
 
     <style>
         body {
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+            min-width:320px;
+        }
+        .btn{
+            background-color:#fb1b5a;
+            color:#ffffff;
+            padding:5px 15px;
+            width:100%;
+            font-size:16px;
+            border:3px solid #c91649;
+            border-radius:6px;
+            margin-bottom:5px;
+        }
+
+        .btn:hover, .btn:focus{
+            background-color:#c91649;
+            border:3px solid #c91649;
+            outline:0;
         }
     </style>
 </head>
 <body>
-    <button id="fillform" class="btn btn-primary">Fill form</button>
+    <h1>Form Filler</h1>
+    <button id="fillform" class="btn btn-primary">Form Filler</button>
+    <small>&copy;<span id="year">2018</span> Robinmglsk</small>
+    <script src="faker.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
