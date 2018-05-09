@@ -4,6 +4,8 @@ document.getElementById('fillform').addEventListener('click', e => {
     
     let value = '';
     let ids = [];
+
+    faker.locale = "nl"
     
     // Fill first name
     value = faker.name.firstName();
@@ -43,7 +45,7 @@ document.getElementById('fillform').addEventListener('click', e => {
 
     // Fill e-mail
     value = faker.internet.userName() + '@mglsk.be';
-    ids = ['email', 'emailaddress', 'mailaddress'];
+    ids = ['email', 'emailaddress', 'mailaddress','emailadress','emailAddress'];
     ids.forEach( (element) => {
         chrome.tabs.executeScript({
             code: 'if(document.getElementById(\''+element+'\') !== null){document.getElementById(\''+element+'\').value = "'+value+'";}'
@@ -79,7 +81,7 @@ document.getElementById('fillform').addEventListener('click', e => {
     });
 
     // Fill number
-    value = faker.random.number();
+    value = faker.random.number({min:1,max:300});
     ids = ['number','houseNumber','house_number'];
     ids.forEach( (element) => {
         chrome.tabs.executeScript({
